@@ -91,9 +91,9 @@
 # default dark noise frequency (and conversion factor) is PMT property (NEW), set in the code.
 # Below gives possibility to overwrite nominal values, eg. to switch OFF the Dark Noise.
 #/DarkRate/SetDarkRate 0 kHz   #Turn dark noise off
-#/DarkRate/SetDarkRate 4.2 kHz #This is the value for SKI set in SKDETSIM.
+/DarkRate/SetDarkRate 4.2 kHz #This is the value for SKI set in SKDETSIM.
 #/DarkRate/SetDarkRate 8.4 kHz #For 20 inch HPDs and Box and Line PMTs, based on High QE 20in R3600 dark rate from EGADS nov 2014
-/DarkRate/SetDarkRate 1.2 kHz #For 12 inch HPDs and Box and Line PMTs,
+#/DarkRate/SetDarkRate 1.2 kHz #For 12 inch HPDs and Box and Line PMTs,
 /DarkRate/SetDarkRate2 600 kHz #For 3 inch PMT
 
 # command to multiply the dark rate.
@@ -116,8 +116,6 @@
 #/DarkRate/SetDarkWindow 4000
 
 ##################################################################
-### CHANGED TO THE SAME DR TIME WINDOW FOR NTAG ANALYSIS. SHOULD UNDERSTAND FIRST WHAT IS OURS.
-### +/- 100100 WAS WORKING FINE BEFORE.
 /DarkRate/SetDarkMode 0
 /DarkRate/SetDarkHigh 101000
 /DarkRate/SetDarkLow -101000
@@ -160,9 +158,11 @@
 /gps/particle e-
 #/gps/energy 0.001 eV
 #/gps/energy 1 MeV
+
+#### SAMPLE TO BE USED AS SIGNAL EVENTS FOR MVA
 /gps/ene/type Gauss
-/gps/ene/mono 4 MeV
-/gps/ene/sigma 1 MeV
+/gps/ene/mono 3 MeV
+/gps/ene/sigma 0.5 MeV
 /gps/direction 1 0 0
 #/gps/position 0. 0. 0. m
 #/gps/position 3.5 0. 0. m
